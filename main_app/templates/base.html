@@ -9,7 +9,7 @@
     <link
       rel="shortcut icon"
       type="image/png"
-      href="{% static 'images/splash.svg'%}"
+      href="{% static 'images/splash.svg' %}"
     />
     <link rel="stylesheet" href="{% static 'css/base.css' %}" />
     <title>Cat Collector</title>
@@ -18,17 +18,18 @@
   <body>
     <header>
       <div class="header-logo-container">
-        <a href="/">
+        <a href="{% url 'home' %}">
           <img
-            src="{%static 'images/header-logo.svg'%}"
+            src="{% static 'images/header-logo.svg' %}"
             alt="The Cat Collector Logo"
           />
         </a>
       </div>
       <nav>
         <ul>
-          <li><a href="/cats">All Cats</a></li>
-          <li><a href="/about">About</a></li>
+          <li><a href="{% url 'cat-index' %}">All Cats</a></li>
+          <li><a href="{% url 'cat-create' %}">Add a Cat</a></li>
+          <li><a href="{% url 'about' %}">About</a></li>
         </ul>
       </nav>
     </header>
